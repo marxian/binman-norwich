@@ -4,5 +4,14 @@ runtime: python
 api_version: 1
 
 handlers:
-- url: /.*
-  script: helloworld.py
+
+
+- url: /_ah/mail/sms@binman-norwich.appspotmail\.com
+  script: handle_incoming_email.py 
+  login: admin
+  
+# - url: /.*
+#   script: helloworld.py
+
+inbound_services:
+- mail
