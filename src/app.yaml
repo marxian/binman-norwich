@@ -10,8 +10,8 @@ handlers:
   script: handle_incoming_email.py 
   login: admin
   
-# - url: /.*
-#   script: helloworld.py
+- url: /.*
+  script: taykt_handler.py
 
 inbound_services:
 - mail
