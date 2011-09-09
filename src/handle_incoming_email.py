@@ -16,7 +16,7 @@ def dbg():
     pdb.Pdb(stdin=getattr(sys,'__stdin__'),stdout=getattr(sys,'__stderr__')).set_trace(sys._getframe().f_back)
 
 def send_via_kapow(number, message):
-    url = 'http://www.kapow.co.uk/scripts/sendsms.php?username=neontribe&password=b191wkm&mobile=%s&sms=%s'
+    url = 'http://www.kapow.co.uk/scripts/sendsms.php?username=neontribe&password=pw&mobile=%s&sms=%s'
     url = url % (number, urllib.quote_plus(message))
     response = fetch(url)
     return response
